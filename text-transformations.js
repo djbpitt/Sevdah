@@ -1,5 +1,5 @@
 "use strict";
-/* INITIALIZION */
+
 function textTransformationsInit() {
   var languageToggles = document.getElementsByClassName("languageToggle")
   for (var i = 0, len = languageToggles.length; i < len; i++) {

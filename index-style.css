@@ -1,210 +1,228 @@
 body {
-    background-color: #0C356A;
-    color: #FFC436;
-    padding: 10px;
+  background-color: #0C356A;
+  color: #FFC436;
+  padding: 10px;
 }
 
 nav {
-    width: 20%;
-    height: 725px;
-    background-color: #0174BE;
-    position: sticky;
-    top: 0px;
-    float: left;
-    list-style-type: none;
-    justify-content: space-around;
-    padding: 10px;
-    margin: 10px;
+  width: 20%;
+  height: 725px;
+  background-color: #0174BE;
+  position: sticky;
+  top: 0px;
+  float: left;
+  list-style-type: none;
+  justify-content: space-around;
+  padding: 10px;
+  margin: 10px;
 }
 
 h1.website_title {
-    background-color: #FFC436;
-    color: #0C356A;
-    padding: 10px;
-    text-align: center;
-    font-size: xx-large;
-    border: solid #0C356A 5px;
+  background-color: #FFC436;
+  color: #0C356A;
+  padding: 10px;
+  text-align: center;
+  font-size: xx-large;
+  border: solid #0C356A 5px;
 }
 
 ul.navig {
-    background-color: #FFC436;
-    list-style-type: none;
-    height: 65%;
-    padding: 10px;
-    justify-content: space-around;
+  background-color: #FFC436;
+  list-style-type: none;
+  height: 65%;
+  padding: 10px;
+  justify-content: space-around;
 }
 
 li.nav_button {
-    max-width: 100%;
-    margin: 5px;
-    padding: 5px;
-    justify-content: space-around;
-    background-color: #0C356A;
+  max-width: 100%;
+  margin: 5px;
+  padding: 5px;
+  justify-content: space-around;
+  background-color: #0C356A;
 }
 
 li.nav_button:hover {
-    background-color: #0174BE;
+  background-color: #0174BE;
 }
 
 a.nav_link {
-    list-style-type: none;
-    text-decoration: none;
-    color: #FFC436;
-    text-align: center;
+  list-style-type: none;
+  text-decoration: none;
+  color: #FFC436;
+  text-align: center;
 }
 
 div.languages {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 85%;
-    list-style-type: none;
-    padding: 10px;
-    margin: 10px;
-    list-style-type: none;
-    text-align: center;
-    background-color: #0C356A;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 85%;
+  list-style-type: none;
+  padding: 10px;
+  margin: 10px;
+  list-style-type: none;
+  text-align: center;
+  background-color: #0C356A;
 }
 
 button.languages {
-    padding: 5px;
-    background-color: #0174BE;
-    color: #FFC436;
-    font-family: serif;
+  padding: 5px;
+  background-color: #0174BE;
+  color: #FFC436;
+  font-family: serif;
 }
 
 button.languages:hover {
-    background-color: #0174BE;
+  background-color: #0174BE;
 }
 
 section {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 h1.main_title {
-    font-variant: small-caps;
-    font-size: xx-large;
+  font-variant: small-caps;
+  font-size: xx-large;
 }
 
 hr {
-    background-color: #FFC436;
-    padding: 0px;
-    margin: 10px;
+  background-color: #FFC436;
+  padding: 0px;
+  margin: 10px;
 }
 
 div.info {
-    padding: 10px;
-    margin: 5px;
-    text-align: justify
+  padding: 10px;
+  margin: 5px;
+  text-align: justify
 }
 
 h2 {
-    font-variant: small-caps;
+  font-variant: small-caps;
 }
 
 p.subtitle {
-    font-variant: small-caps;
-    font-size: larger;
+  font-variant: small-caps;
+  font-size: larger;
 }
 
 p {
-    text-align: justify
+  text-align: justify
 }
 
 a {
-    color: #FFC436;
+  color: #FFC436;
 }
 
 li.directory {
-    max-width: 100%;
-    margin: 5px;
-    padding: 5px;
-    justify-content: space-around;
-    background-color: #0C356A;
+  max-width: 100%;
+  margin: 5px;
+  padding: 5px;
+  justify-content: space-around;
+  background-color: #0C356A;
 }
 
 a.directory {
-    list-style-type: none;
-    text-decoration: none;
-    color: #FFC436;
-    text-align: center;
-    padding: 5px;
-    background-color: #0174BE;
+  list-style-type: none;
+  text-decoration: none;
+  color: #FFC436;
+  text-align: center;
+  padding: 5px;
+  background-color: #0174BE;
 }
 
 a.directory:hover {
-    background-color: #FFC436;
-    color: #0174BE;
+  background-color: #FFC436;
+  color: #0174BE;
 }
 
 p.text_desc {
-    font-size: small;
-    padding: 0px;
+  font-size: small;
+  padding: 0px;
 }
 
 div.options {
-    display: flex;
-    flex-direction: row;
-    font-size: small;
-    justify-content: center;
-    padding: 0px;
+  display: flex;
+  flex-direction: row;
+  font-size: small;
+  justify-content: center;
+  padding: 0px;
 }
 
 section.options {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    top: 0px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  top: 0px;
 }
 
 h3.options {
-    display: flex;
-    padding: 0px;
-    margin: 0px;
-    text-align: center;
-    top: 0px;
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  top: 0px;
 }
 
 ul.options {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 button.options {
-    display: flex;
-    justify-content: center;
-    text-align: justify;
-    background-color: #0174BE;
-    color: #FFC436;
-    font-family: serif;
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  background-color: #0174BE;
+  color: #FFC436;
+  font-family: serif;
 }
 
 button.options:hover {
-    background-color: #0174BE;
+  background-color: #0174BE;
 }
 
 section.text_window {
-    height: 450px;
-    overflow: auto;
-    padding: 10px;
+  height: 450px;
+  overflow: auto;
+  padding: 10px;
 }
 
 h1.poem_title {
-    
+
 }
 
 ul.poem {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 li.space_line {
-    color: #0C356A;
+  color: #0C356A;
 }
 
 li.citations {
-    padding: 5px;
+  padding: 5px;
+}
+
+/* Styles for language highlighting */
+
+.italic {
+  font-style: italic;
+}
+.bold {
+  font-weight: bold;
+}
+.under {
+  text-decoration: underline;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
 }

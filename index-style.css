@@ -94,9 +94,11 @@ hr {
 }
 
 div.info {
+
   padding: 10px;
   margin: 5px;
-  text-align: justify
+  text-align: justify;
+
 }
 
 h2 {
@@ -109,7 +111,10 @@ p.subtitle {
 }
 
 p {
-  text-align: justify
+
+  text-align: justify;
+  font-size: 18px;
+
 }
 
 a {
@@ -207,6 +212,55 @@ li.space_line {
 
 li.citations {
   padding: 5px;
+}
+
+a.info_link {
+  color: #FFC436;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  font-variant: small-caps;
+}
+
+span.info_link {
+  justify-content: center;
+  background-color: #0174BE;
+  color: #FFC436;
+  padding: 5px;
+  font-size: large;
+  max-width: 300px;
+}
+
+span.info_link:hover {
+  background-color: #0C356A;
+}
+
+tr {
+  padding: 5px;
+}
+
+td {
+  padding: 5px;
+}
+
+div.author-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+button.author-buttons {
+  padding: 5px;
+  background-color: #0174BE;
+  color: #FFC436;
+  font-family: serif;
+}
+
+button.author-buttons:hover {
+  background-color: #0174BE;
 }
 
 /* Styles for language highlighting */

@@ -27,4 +27,26 @@ function changeStyle(e) {
   }
 }
 
+
+function Latin() {
+  var x = document.getElementsByClassName("cyrillic");
+  for (let i = 0; i < x.length; i++) {
+    x[i].style.display = "none"
+  };
+  var y = document.getElementsByClassName("latin_alp");
+  for (let i = 0; i < y.length; i++) {
+    y[i].style.display = "block"
+  };
+}
+
+function Cyrillic() {
+  var x = document.getElementsByClassName("latin_alp");
+  for (let i = 0; i < x.length; i++) {
+    x[i].style.display = "none"
+  };
+  var y = document.getElementsByClassName("cyrillic");
+  for (let i = 0; i < y.length; i++) {
+    y[i].style.display = "block"
+  };
+}
 document.addEventListener('DOMContentLoaded', textTransformationsInit);

@@ -10,6 +10,20 @@
     <xsl:variable name="bar-width" as="xs:double" select="100"/>
     <xsl:variable name="bar-spacing" as="xs:double" select="$bar-width div 4"/>
 
+    <!-- FUNCTION -->
+    <xsl:function name="cam:cyr-to-lat">
+        <xsl:param name="input" as="xs:string"/>
+        <xsl:variable name="apply-lj" as="xs:string" select="$input => replace('љ','lj')"/>
+        <xsl:variable name="apply-nj" as="xs:string" select="$apply-lj => replace('њ','nj')"/>
+        <xsl:variable name="apply-dzh" as="xs:string" select="$apply-nj => replace('џ','dž')"/>
+        <xsl:variable name="apply-cap-lj" as="xs:string" select="$apply-dzh => replace('Љ','Lj')"/>
+        <xsl:variable name="apply-cap-nj" as="xs:string" select="$apply-cap-lj => replace('Њ','Nj')"/>
+        <xsl:variable name="apply-cap-dzh" as="xs:string" select="$apply-cap-nj => replace('Џ','Dž')"/>
+        <xsl:variable name="one-to-one" as="xs:string" select="$apply-cap-dzh => translate('абвгдђежзијклмнопрстћуфхцчшАБВГДЂЕЖЗИЈКЛМНОПРСТЋУФЦЧШ','abvgdđežzijklmnoprstćufhcčšABVGDĐEŽZIJKLMNOPRSTĆUFCČŠ')"/>
+        <xsl:value-of select="$one-to-one"/>
+    </xsl:function>
+
+    <!-- TEMPLATES -->
     <xsl:template match="/">
         <html xmlns="http://www.w3.org/1999/xhtml">
             <head>
@@ -22,34 +36,40 @@
                     <h1 class="website_title">SEVDAH</h1>
                     <ul class="navig">
                         <li class="nav_button">
-                            <a href="../index.html" class="nav_link">About the Project</a>
+                            <a href="../index.html" class="nav_link en" style="display:block">About the Project</a>
+                            <a href="../index.html" class="nav_link bs-cy" style="display:none">О овом пројекту</a>
+                            <a href="../index.html" class="nav_link bs-la" style="display:none">O ovom projetku</a>
                         </li>
                         <li class="nav_button">
-                            <a href="../methodology.xhtml" class="nav_link">Methodology</a>
+                            <a href="../methodology.xhtml" class="nav_link en" style="display:block">Methodology</a>
+                            <a href="../methodology.xhtml" class="nav_link bs-cy" style="display:none">Начин истраживања</a>
+                            <a href="../methodology.xhtml" class="nav_link bs-la" style="display:none">Način istraživanja</a>
                         </li>
                         <li class="nav_button">
-                            <a href="../text_directory.xhtml" class="nav_link">Text Directory</a>
+                            <a href="../text_directory.xhtml" class="nav_link en" style="display:block">Text Directory</a>
+                            <a href="../text_directory.xhtml" class="nav_link bs-cy" style="display:none">Директориј текстова</a>
+                            <a href="../text_directory.xhtml" class="nav_link bs-la" style="display:none">Direktorij tekstova</a>
                         </li>
                         <li class="nav_button">
-                            <a href="../textual_analysis.xhtml" class="nav_link">Textual Analysis</a>
+                            <a href="../textual_analysis.xhtml" class="nav_link en" style="display:block">Textual Analysis</a>
+                            <a href="../textual_analysis.xhtml" class="nav_link bs-cy" style="display:none">Анализа текстова</a>
+                            <a href="../textual_analysis.xhtml" class="nav_link bs-la" style="display:none">Analiza tekstova</a>
                         </li>
                         <li class="nav_button">
-                            <a href="../contributors.xhtml" class="nav_link">Contributors</a>
+                            <a href="../contributors.xhtml" class="nav_link en" style="display:block">Contributors</a>
+                            <a href="../contributors.xhtml" class="nav_link bs-cy" style="display:none">Сурадници</a>
+                            <a href="../contributors.xhtml" class="nav_link bs-la" style="display:none">Suradnici</a>
                         </li>
                         <li class="nav_button">
-                            <a href="../bibliography.xhtml" class="nav_link">Bibliography</a>
+                            <a href="../bibliography.xhtml" class="nav_link en" style="display:block">Bibliography</a>
+                            <a href="../bibliography.xhtml" class="nav_link bs-cy" style="display:none">Библиографија</a>
+                            <a href="../bibliography.xhtml" class="nav_link bs-la" style="display:none">Bibliografija</a>
                         </li>
                     </ul>
                     <div class="languages">
-                        <button class="languages">
-                            <span onclick="English()">English</span>
-                        </button>
-                        <button class="languages">
-                            <span onclick="Bosnian_Cyrillic()">Бос-Ћир</span>
-                        </button>
-                        <button class="languages">
-                            <span onclick="Bosnian_Latin()">Bos-Lat</span>
-                        </button>
+                        <button class="languages"><span onclick="English()">English</span></button>
+                        <button class="languages"><span onclick="Bosnian_Cyrillic()">Бос-Ћир</span></button>
+                        <button class="languages"><span onclick="Bosnian_Latin()">Bos-Lat</span></button>
                     </div>
                 </nav>
                 <h1 class="main_title en" style="display:block">Textual Analysis</h1>
@@ -57,13 +77,17 @@
                 <h1 class="main_title bs-la" style="display:none">Analiza tekstova</h1>
                 <hr/>
                 <section>
-                    <h2>Percentages of Word Origins</h2>
+                    <h2 class="en" style="display:block">Percentages of Word Origins</h2>
+                    <h2 class="bs-cy" style="display:none">Проценат почетака слова</h2>
+                    <h2 class="bs-la" style="display:none">Procenat početaka slova</h2>
                     <div class="info">
                         <xsl:apply-templates mode="heading"/>
                         <br/>
                         <xsl:apply-templates mode="graph"/>
                     </div>
-                    <h2>Total Number of Word Origins</h2>
+                    <h2 class="en" style="display:block">Total Number of Word Origins</h2>
+                    <h2 class="bs-cy" style="display:none">Тотални број почетака слова</h2>
+                    <h2 class="bs-la" style="display:none">Totalni broj početaka slova</h2>
                     <div class="info">
                         <xsl:apply-templates mode="chart"/>
                     </div>
@@ -79,16 +103,28 @@
             <xsl:apply-templates mode="heading" select="title_bs"/>
             <xsl:text> - </xsl:text>
             <xsl:apply-templates mode="heading" select="title_en"/>
+            <xsl:text> - </xsl:text>
+            <xsl:apply-templates mode="heading" select="cam:cyr-to-lat(title_en)"/>
         </h3>
     </xsl:template>
     <xsl:template match="author" mode="heading">
-        <p>
+        <p class="en" style="display:block">
             <xsl:value-of select="@type ! translate(., 'p', 'P')"/>
             <xsl:text>: </xsl:text>
             <xsl:apply-templates mode="heading"/>
             <xsl:text> (</xsl:text>
             <xsl:value-of select="@lat"/>
             <xsl:text>)</xsl:text>
+        </p>
+        <p class="bs-cy" style="display:none">
+            <xsl:value-of select="@type ! replace(., 'performer', 'Пјевац') ! replace(., 'poet', 'Пјесник')"/>
+            <xsl:text>: </xsl:text>
+            <xsl:apply-templates mode="heading"/>
+        </p>
+        <p class="bs-la" style="display:none">
+            <xsl:value-of select="@type ! replace(., 'performer', 'Pjevac') ! replace(., 'poet', 'Pjesnik')"/>
+            <xsl:text>: </xsl:text>
+            <xsl:value-of select="@lat"/>
         </p>
     </xsl:template>
     <xsl:template match="year" mode="heading"/>

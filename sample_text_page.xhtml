@@ -148,25 +148,24 @@
                 <h3 class="options bs-la" style="display:none">Abeceda / Azbuka</h3>
                 <ul class="options">
                     <li class="options">
-                        <button class="options en" style="display:block"
-                            ><span>Cyrillic</span></button>
-                        <button class="options bs-cy" style="display:none"
-                            ><span>Ћирилица</span></button>
-                        <button class="options bs-la" style="display:none"
-                            ><span>Ćirilica</span></button>
+                        <button class="options en" style="display:block" onclick="Cyrillic()">
+                            <span class="en">Cyrillic</span>
+                            <span class="bs-cy">Ћирилица</span>
+                            <span class="bs-la">Ćirilica</span>
+                        </button>
                     </li>
                     <li class="options">
-                        <button class="options en" style="display:block"><span>Latin</span></button>
-                        <button class="options bs-cy" style="display:none"
-                            ><span>Латично</span></button>
-                        <button class="options bs-la" style="display:none"
-                            ><span>Latično</span></button>
+                        <button class="options en" style="display:block" onclick="Latin()">
+                            <span class="en">Latin</span>
+                            <span class="bs-cy">Латински</span>
+                            <span class="bs-la">Latinski</span>
+                        </button>
                     </li>
                 </ul>
             </section>
         </div>
         <hr />
-        <section class="text_window">
+        <section class="text_window latin" style="display:none">
             <h1 class="poem_title">This is the Title of the Poem</h1>
             <ul class="poem">
                 <li>
@@ -189,6 +188,18 @@
                     <span class="turkic">Turkic</span>
                     <span class="germanic">Germanic</span>
                     <span class="hungarian">Hungarian</span>
+                    <span class="n/a">n/a</span>
+                </li>
+            </ul>
+        </section>
+        <section class="text_window cyrillic" style="display:block">
+            <ul>
+                <li>
+                    <span class="slavic">Славенски</span>
+                    <span class="turkic">Туркси</span>
+                    <span class="germanic">Њемачки</span>
+                    <span class="hungarian">Hungarian</span>
+                    <span class="italian">Италијански</span>
                     <span class="n/a">n/a</span>
                 </li>
             </ul>
